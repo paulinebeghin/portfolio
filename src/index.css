@@ -1,5 +1,29 @@
 @import "tailwindcss";
 
 body {
+  margin: 0;
   font-family: 'Josefin Sans', sans-serif;
+  background-color: #FFCEAC;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover; /* 'cover' est mieux pour remplir tout l'écran */
+  min-height: 100vh;
+  
+  /* Image par défaut (Desktop) */
+  background-image: url("/fond.svg");
+}
+
+/* Version Tablette et Mobile (écran inférieur à 768px) */
+@media (max-width: 950px) {
+  body {
+    /* On change l'image de fond pour la version verticale */
+    background-image: url("/fondMobile.png"); 
+    
+    /* On force cover pour être sûr que ça remplisse tout l'espace */
+    background-size: cover; 
+    
+    /* On s'assure que c'est bien centré */
+    background-position: center;
+  }
 }

@@ -2,7 +2,7 @@
 interface ButtonProps {
   label: string;
   ahorizontalArrow: boolean;
-  colorOrange: boolean;
+  colorCreme: boolean;
   personalizedClass?: string;
 
 }

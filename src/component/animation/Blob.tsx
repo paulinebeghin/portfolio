@@ -54,6 +54,8 @@ export const Blob: React.FC<BlobProps> = ({
         <g transform="translate(450, 300)"> 
           <motion.path
             fill="#F95602" 
+            stroke="#FFCEAC" // Couleur du contour (ex: la couleur de ton fond)
+  strokeWidth="5" // Épaisseur du contour
             d={pathA}
             animate={{ d: [pathA, pathB, pathA] }}
             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
