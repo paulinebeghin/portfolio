@@ -1,9 +1,18 @@
 @import "tailwindcss";
 
+@theme {
+  --breakpoint-xs: 400px; /* Voilà comment on crée ton breakpoint en v4 ! */
+
+  --color-main: #FFCEAC;
+  --color-typo: #2A016A;
+  --color-seconds: #F95602;
+  --color-tertiary: #FFB800;
+}
+
 body {
   margin: 0;
   font-family: 'Josefin Sans', sans-serif;
-  background-color: #FFCEAC;
+  background-color: var(--color-main);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;

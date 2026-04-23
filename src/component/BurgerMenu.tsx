@@ -44,8 +44,9 @@ export const BurgerMenu = ({ isOpen, toggleMenu }: { isOpen: boolean; toggleMenu
               <X />
             </button>
         
-            <div>
+            <div className="grid gap-2">
                 <LinkNav/>
+                <p className="text-[#FFCEAC] font-bold">Contact</p>
                 <LinkNavContact/>
             </div>
            

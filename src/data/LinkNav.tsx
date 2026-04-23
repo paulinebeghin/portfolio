@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Button } from "../component/button/Button";
 
 export const LinkNav = () => {
     const links = [
@@ -18,12 +19,10 @@ export const LinkNav = () => {
    return (
     <nav className="w-full md:w-auto   ">
 
-      <ul className={`text-white`}>
+      <ul >
         {links.map((link, index) => (
           <li key={index}>
-            <Link to={link.link} className="hover:text-amber-500">
-              {link.text}
-            </Link>
+            <Button label={link.text} link={link.link} colorCreme={true} horizontalArrow={true} />
           </li>
         ))}
       </ul>
@@ -49,13 +48,11 @@ export const LinkNavContact = () => {
     ]
    return (
     <nav className="w-full md:w-auto   ">
-
-      <ul className={`text-white`}>
+     
+      <ul >
         {links.map((link, index) => (
           <li key={index}>
-            <Link to={link.link} className="hover:text-amber-500">
-              {link.text}
-            </Link>
+            <Button label={link.text} link={link.link} colorCreme={true} horizontalArrow={true} />
           </li>
         ))}
       </ul>
