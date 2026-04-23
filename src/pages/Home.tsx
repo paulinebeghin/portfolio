@@ -1,28 +1,38 @@
- // Le composant que je t'ai donné avant
-// import  Blob  from "../component/animation/Blob";
+import React, { useState } from "react";
 import { Blob } from "../component/animation/Blob";
+import { BurgerMenu } from "../component/BurgerMenu";
+
 export const Home = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <div className="relative min-h-screen  bg-[#FFCEAC] flex items-center justify-center overflow-hidden">
+    // La div parente est en "relative"
+    <div className="relative min-h-screen bg-[#FFCEAC] flex items-center justify-center overflow-hidden">
       
-      {/* 1. LE FOND ANIMÉ (Z-INDEX NÉGATIF) */}
-      <div className="absolute inset-0 z-0 pointer-events-none w-full h-full">
-        <Blob/>
+      {/* BOUTON BURGER (En haut à droite) */}
+      {/* <button 
+        onClick={() => setIsMenuOpen(true)}
+        className="fixed top-8 right-8 z-[60] p-3 rounded-xl bg-[#F95602] text-[#FFCEAC] font-bold"
+      >
+        Menu
+      </button> */}
+
+      {/* LE MENU BURGER */}
+      {/* <BurgerMenu isOpen={isMenuOpen} toggleMenu={() => setIsMenuOpen(false)} /> */}
+
+      {/* BLOB EN FOND DE PAGE (Home) */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <Blob followMouse={true} />
       </div>
 
-      {/* 2. LE TEXTE IMMOBILE (Z-INDEX POSITIF) */}
-      <div className="relative z-10 px-6 text-center">
-        <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight">
-          Design <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">Abstrait</span>
-        </h1>
-        <p className="mt-4 text-slate-400 text-lg md:text-xl max-w-md mx-auto">
-          Les formes bougent avec votre souris, mais ce message reste gravé dans le marbre.
-        </p>
-        <button className="mt-8 px-8 py-3 bg-white text-black font-semibold rounded-full hover:bg-opacity-90 transition">
-          Découvrir
-        </button>
+      {/* TEXTE CENTRAL */}
+      <div className="relative z-10 text-center flex flex-col items-center">
+         <img src="home/portraitHome.svg" alt="Portrait" className="w-60 h-auto mb-4" />
+         <div className="text-[#fab898]">
+            <p className="text-2xl ">Je suis Pauline Beghin</p>
+            <p>Je suis graphiste & développeur web full stack</p>
+         </div>
       </div>
-
     </div>
   );
 };
