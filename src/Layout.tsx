@@ -1,26 +1,18 @@
 import { Outlet } from "react-router-dom";
 import { NavBar } from "./component/NavBar";
-// import NavBar from "./navbar/NavBar";
-
 
 export const Layout = () => {
   return (
-    <div className="">
+    <div>
 
       {/* NAVBAR */}
-      <div className="fixed top-0 left-0 w-full z-50 flex justify-center  ">
+      <div className="fixed top-0 left-0 w-full z-50 flex justify-center px-4 sm:px-20 py-8 ">
         <NavBar />
       </div>
       {/* CONTENU */}
-      <main className="w-full ">
+      <main className="w-full px-4 sm:px-20 ">
         <Outlet />
       </main>
-
-      {/* FOOTER
-      <footer className="w-full flex justify-center">
-        <Footer />
-      </footer> */}
-
     </div>
   )
 };

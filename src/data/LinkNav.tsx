@@ -1,19 +1,18 @@
-import { Link } from "react-router-dom";
 import { Button } from "../component/button/Button";
 
 export const LinkNav = () => {
     const links = [
         {
             text: "Voir mes projets",
-            link : "/"
+            link : "/projets"
         },
         {
             text: "Voir mes centre d'intérêt",
-            link : "/personnages"
+            link : "/centres-d-interet"
         },
         {
-            text: "En savoir plus",
-            link : "/livres"
+            text: "A propos",
+            link : "/a-propos"
         },
     ]
    return (

@@ -3,7 +3,7 @@ import { motion, useSpring, useTransform } from "framer-motion";
 import { useMousePosition } from "./mousePosition";
 
 interface BlobProps {
-  followMouse?: boolean; // Nouvelle option
+  followMouse?: boolean; 
   className?: string;
 }
 
@@ -38,8 +38,8 @@ export const Blob: React.FC<BlobProps> = ({
   }, [x, y, smoothX, smoothY, followMouse]);
 
   const isMobile = windowSize.width < 768;
-  const illustrationScale = isMobile ? 1.7 : 1.1; 
-  const amplitude = isMobile ? 30 : 100; 
+  const illustrationScale = isMobile ? 1.9 : 1.1; 
+  const amplitude = isMobile ? 30 : 80; 
 
   // Si followMouse est faux, on force la valeur à 0 (centre)
   const translateX = useTransform(smoothX, [0, windowSize.width], followMouse ? [-amplitude, amplitude] : [0, 0]);
@@ -54,8 +54,8 @@ export const Blob: React.FC<BlobProps> = ({
         <g transform="translate(450, 300)"> 
           <motion.path
             fill="#F95602" 
-            stroke="#FFCEAC" // Couleur du contour (ex: la couleur de ton fond)
-  strokeWidth="5" // Épaisseur du contour
+            stroke="#FFCEAC" 
+            strokeWidth="5" 
             d={pathA}
             animate={{ d: [pathA, pathB, pathA] }}
             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}

@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --breakpoint-xs: 400px; /* Voilà comment on crée ton breakpoint en v4 ! */
+  --breakpoint-xs: 500px; /* Voilà comment on crée ton breakpoint en v4 ! */
 
   --color-main: #FFCEAC;
   --color-typo: #2A016A;
