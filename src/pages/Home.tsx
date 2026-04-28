@@ -12,7 +12,7 @@ export const Home = () => {
       </div>
 
 
-      <div className="relative z-10 flex flex-col items-center w-full p-8 sm:pt-0 sm:min-h-screen sm:justify-center">
+      <div className="relative z-10 flex flex-col items-center justify-center w-full p-8 sm:pt-0 sm:min-h-screen sm:justify-center">
         
         {/* portrait */}
         <img src="home/portraitHome.svg" alt="Portrait" className="w-20 sm:block sm:w-60 h-auto mb-8" />
