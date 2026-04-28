@@ -3,6 +3,7 @@ import { Home } from "./pages/Home";
 import { Layout } from "./Layout";
 import { APropos } from "./pages/APropos";
 import { Projets } from "./pages/Projets";
+import { DetailProjet } from "./pages/DetailProjet";
 
 export const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ export const router = createBrowserRouter([
       {
         path: "/projets",
         element: <Projets/>,
+      },
+      {
+        path: "/projets/:slug",
+        element: <DetailProjet/>,
       },
       {
         path: "/centres-d-interet",
