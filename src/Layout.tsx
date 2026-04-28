@@ -3,7 +3,7 @@ import { NavBar } from "./component/NavBar";
 
 export const Layout = () => {
   return (
-    <div>
+    <div className="max-h-screen">
 
       {/* NAVBAR */}
       <div className="fixed top-0 left-0 w-full z-50 flex justify-center px-4 sm:px-20 py-8 mb-20">

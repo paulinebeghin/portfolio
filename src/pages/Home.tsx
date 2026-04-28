@@ -11,7 +11,6 @@ export const Home = () => {
         <Blob followMouse={true} />
       </div>
 
-
       <div className="relative z-10 flex flex-col items-center justify-center w-full p-8 sm:pt-0 sm:min-h-screen sm:justify-center">
         
         {/* portrait */}
@@ -28,7 +27,6 @@ export const Home = () => {
             <Button label="A propos" link="/a-propos" colorCreme={true} horizontalArrow={true} />
           </div>
         </div>
-
       </div>
     </div>
   );

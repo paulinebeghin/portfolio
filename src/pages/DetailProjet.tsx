@@ -1,15 +1,6 @@
 import { useParams } from "react-router-dom";
-import { Carousel } from "@/ui/components/Carousel"
+import { Carousel, CarouselContent, CarouselDots, CarouselItem, CarouselNext, CarouselPrevious } from "@/ui/components/Carousel"
 import { LinkDetailProjet } from "../data/LinkDetailProjet";
-
-interface DetailProps {
-  id: string;
-  title: string;
-  slug: string;
-  description: string[];
-  image: string[];
-  lien?: string[];
-}
 
 export const DetailProjet = () => {
 
@@ -19,40 +10,47 @@ export const DetailProjet = () => {
 
 
   if (!projet) {
-    return <div className="mt-40 text-center">Projet introuvable</div>;
+    return <div className="mt-40 text-typo text-center">Projet introuvable</div>;
   }
 
   return (
-    <div className="relative min-h-screen flex items-center mt-30 px-4">
-        {/* diap */}
-        <div>
-            <Carousel images={projet.image} />
-            <Carousel>  </Carousel>
-        </div>
-
-      <div className="text-typo min-w-[300px] ">
-        <h1 className="text-2xl font-bold ">{projet.title}</h1>
-        
-        <div className="grid gap-4 ">
-          {projet.description.map((phrase, index) => (
-            <p key={index} className="text-lg leading-relaxed">
-              {phrase}
-            </p>
-          ))}
-        </div>
-
-        {/* Affichage des images du projet */}
-        {/* <div className="grid gap-6">
+    <div className="relative  flex flex-col lg:flex-row  justify-center   mt-30  gap-10">
+    
+    
+    <div className="w-full lg:w-1/2 "> 
+      <Carousel slidesPerView={1} className="">
+        <CarouselContent>
           {projet.image.map((imgUrl, index) => (
-            <img 
-              key={index} 
-              src={imgUrl} 
-              alt={`${projet.title} - ${index}`} 
-              className="w-full rounded-2xl shadow-lg"
-            />
+            <CarouselItem key={index}>
+              <div className="flex items-center justify-center"> 
+                <img 
+                  src={imgUrl} 
+                  alt={`${projet.title} - ${index}`} 
+                  className="w-full h-auto rounded-2xl object-contain"
+                />
+              </div>
+            </CarouselItem>
           ))}
-        </div> */}
+        </CarouselContent>
+        <CarouselPrevious /> 
+        <CarouselNext />
+         <CarouselDots />
+      </Carousel>
+    </div>
+
+    {/* 3. Zone de texte */}
+    <div className="text-typo w-full lg:w-1/2 max-w-xl">
+      <h1 className="text-2xl font-bold mb-4">{projet.title}</h1>
+      <div className="grid gap-4">
+        {projet.description.map((phrase, index) => (
+          <p key={index} className="">
+            {phrase}
+          </p>
+        ))}
       </div>
     </div>
-  );
+
+  </div>
+);
+ 
 };

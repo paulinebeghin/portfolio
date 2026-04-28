@@ -348,21 +348,21 @@ function CarouselContentInternal({
         }}
       >
         {childrenArray.map((child, index) => (
-          <div
-            key={index}
-            className={cn(
-              "shrink-0",
-              isVertical && "h-full"
-            )}
-            style={
-              isVertical
-                ? { height: slideSizePx > 0 ? `${slideSizePx}px` : '100%' }
-                : { width: slideSizePx > 0 ? `${slideSizePx}px` : `calc((100% - ${totalGapSize}px) / ${slidesPerView})` }
-            }
-          >
-            {child}
-          </div>
-        ))}
+  <div
+    key={index}
+    className={cn(
+      "shrink-0",
+      isVertical ? "h-full" : "w-full min-w-full max-w-full" // FORCE LA LARGEUR ICI
+    )}
+    style={
+      isVertical
+        ? { height: slideSizePx > 0 ? `${slideSizePx}px` : '100%' }
+        : { width: '100%' } // On simplifie pour laisser Tailwind gérer le 100%
+    }
+  >
+    {child}
+  </div>
+))}
       </div>
     </div>
   )
@@ -376,7 +376,7 @@ function CarouselContent({ children, className }: CarouselContentProps) {
 // CarouselItem
 function CarouselItem({ children, className }: CarouselItemProps) {
   return (
-    <div className={cn("min-w-0 h-full", className)}>
+    <div className={cn("min-w-full w-full h-full", className)}> 
       {children}
     </div>
   )
@@ -398,10 +398,10 @@ function CarouselPrevious({ className }: CarouselPreviousProps) {
       className={cn(
         "absolute z-10",
         "h-8 w-8 rounded-full",
-        "bg-background/80 backdrop-blur-sm border border-border",
-        "flex items-center justify-center",
-        "hover:bg-accent transition-colors",
-        "disabled:opacity-50 disabled:cursor-not-allowed",
+        "bg-main  border-2 border-seconds",
+        "flex items-center text-seconds justify-center",
+        "hover:bg-seconds hover:text-main hover:border-main  transition-colors",
+        " disabled:cursor-not-allowed",
         isVertical
           ? "top-2 left-1/2 -translate-x-1/2"
           : "left-2 top-1/2 -translate-y-1/2",
@@ -430,10 +430,10 @@ function CarouselNext({ className }: CarouselNextProps) {
       className={cn(
         "absolute z-10",
         "h-8 w-8 rounded-full",
-        "bg-background/80 backdrop-blur-sm border border-border",
-        "flex items-center justify-center",
-        "hover:bg-accent transition-colors",
-        "disabled:opacity-50 disabled:cursor-not-allowed",
+        "bg-main  border-2 border-seconds",
+        "flex items-center text-seconds justify-center",
+        "hover:bg-seconds hover:text-main hover:border-main transition-colors",
+        " disabled:cursor-not-allowed",
         isVertical
           ? "bottom-2 left-1/2 -translate-x-1/2"
           : "right-2 top-1/2 -translate-y-1/2",
@@ -468,8 +468,8 @@ function CarouselDots({ className }: CarouselDotsProps) {
           className={cn(
             "rounded-full transition-all",
             isVertical
-              ? cn("w-2 h-2", currentIndex === index ? "bg-primary h-4" : "bg-muted-foreground/30 hover:bg-muted-foreground/50")
-              : cn("h-2 w-2", currentIndex === index ? "bg-primary w-4" : "bg-muted-foreground/30 hover:bg-muted-foreground/50")
+              ? cn("w-2 h-2", currentIndex === index ? "bg-seconds h-4" : "bg-muted-foreground/30 hover:bg-muted-foreground/50")
+              : cn("h-2 w-2", currentIndex === index ? "bg-seconds w-4" : "bg-muted-foreground/30 hover:bg-muted-foreground/50")
           )}
           aria-label={`Go to slide ${index + 1}`}
         />

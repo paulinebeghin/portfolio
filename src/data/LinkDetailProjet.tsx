@@ -8,11 +8,11 @@ export const LinkDetailProjet = [
             "(Projet en cours de réalisation) Dans la continuité de cette modernisation, une seconde phase sera consacrée à la révision complète du menu board. Ce chantier permettra non seulement d'uniformiser l'identité visuelle sur l'ensemble des points de contact du restaurant, mais également de procéder à une mise à jour stratégique de la grille tarifaire. L'enjeu sera de concilier esthétisme, clarté des offres et lisibilité des nouveaux prix pour faciliter la prise de commande.",
         ],
         image:[
-            "/projets/graph/festupizza/fp1.png",
-            "/projets/graph/festupizza/fp2.png",
-            "/projets/graph/festupizza/fp3.png",
-            "/projets/graph/festupizza/fp4.png",
-            "/projets/graph/festupizza/fp5.png",
+            "/projets/graph/festupizza/fp1.jpg",
+            "/projets/graph/festupizza/fp2.jpg",
+            "/projets/graph/festupizza/fp3.jpg",
+            "/projets/graph/festupizza/fp4.jpg",
+            "/projets/graph/festupizza/fp5.jpg",
         ],
         lien:[
             "lien",
