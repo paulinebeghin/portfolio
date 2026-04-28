@@ -1,0 +1,9 @@
+{
+  "$schema": "https://behsseui.dev/schema.json",
+  "componentsDir": "./ui",
+  "libDir": "./lib",
+  "tailwind": {
+    "css": "./src/index.css"
+  },
+  "initialized": true
+}
