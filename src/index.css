@@ -160,7 +160,7 @@ body {
   background-attachment: fixed;
   background-position: center;
   background-size: cover; /* 'cover' est mieux pour remplir tout l'écran */
-  min-height: 100vh;
+
   
   /* Image par défaut (Desktop) */
   background-image: url("/fond.svg");

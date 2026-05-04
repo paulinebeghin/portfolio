@@ -4,7 +4,7 @@ import { Layout } from "./Layout";
 import { APropos } from "./pages/APropos";
 import { Projets } from "./pages/Projets";
 import { DetailProjet } from "./pages/DetailProjet";
-
+import { Passion } from "./pages/Passion";
 export const router = createBrowserRouter([
   {
     element: <Layout/>,
@@ -23,7 +23,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/centres-d-interet",
-        element: <Home/>,
+        element: <Passion/>,
       }, 
       {
         path: "/a-propos",

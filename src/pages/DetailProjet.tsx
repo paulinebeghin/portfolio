@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { Carousel, CarouselContent, CarouselDots, CarouselItem, CarouselNext, CarouselPrevious } from "@/ui/components/Carousel"
 import { LinkDetailProjet } from "../data/LinkDetailProjet";
+import { Button } from "../component/button/Button";
 
 export const DetailProjet = () => {
 
@@ -48,6 +49,19 @@ export const DetailProjet = () => {
           </p>
         ))}
       </div>
+      {projet.lien && projet.lien.length > 0 && (
+  <div className="grid gap-2 mt-8">
+    {projet.lien.map((item, index) => (
+      <Button 
+        key={index}
+        label={item.name}
+        link={item.link}
+        
+        colorCreme={false} horizontalArrow={true}
+      />
+    ))}
+  </div>
+)}
     </div>
 
   </div>

@@ -12,7 +12,7 @@ interface CategoryProps {
 
 export const Projets = () => {
   return (
-    <div className="relative min-h-screen flex flex-col overflow-x-hidden gap-5 mt-30">
+    <div className="relative flex flex-col overflow-x-hidden gap-5 mt-30">
       <div className="grid gap-2">
         <p className="text-2xl font-semibold text-typo">Projets dev web</p>
         
