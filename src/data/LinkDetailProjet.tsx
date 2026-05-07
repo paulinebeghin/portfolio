@@ -22,6 +22,31 @@ export const LinkDetailProjet = [
         ]
     },
     {
+        id: "2D", 
+        title: "Le CIMAP",
+        slug: "lecimap",
+        description:[
+            "Ce projet a été réalisé dans le cadre d'un stage, durant lequel j'ai conçu une application web visant à promouvoir l'image de la société. Après une analyse de l'existant, j'ai élaboré une maquette en étroite collaboration avec le client pour intégrer les évolutions souhaitées. Bien que l'application ait été développée, son déploiement a été suspendu par manque de ressources visuelles.",
+        ],
+        image:[
+            "/projets/dev/cimap/cimap_1.jpg",
+            "/projets/dev/cimap/cimap_2.jpg",
+            "/projets/dev/cimap/cimap_3.jpg",
+            "/projets/dev/cimap/cimap_4.jpg",
+            "/projets/dev/cimap/cimap_5.jpg",
+            "/projets/dev/cimap/cimap_6.jpg",
+            "/projets/dev/cimap/cimap_7.jpg",
+            "/projets/dev/cimap/cimap_8.jpg",
+            "/projets/dev/cimap/cimap_9.jpg",
+            "/projets/dev/cimap/cimap_10.jpg",
+
+        ],
+         lien:[
+            {link:"", name: "Démo du projet"},      
+              
+        ]
+    },
+    {
         id: "1G", 
         title: "Festu'Pizza",
         slug: "festu-pizza",

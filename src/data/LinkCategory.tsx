@@ -6,6 +6,13 @@ export const LinkProjetsDev = [
         imageCategory: "/category/GdcpCouv1.png",
         alt: "description de l'image",
     },
+    {
+        id: "2", 
+        title: "teste",
+        slug: "lecimap",
+        imageCategory: "/category/CimapCouv.jpg",
+        alt: "Image de couverture du projet Le CIMAP",
+    },
 ];
 export const LinkProjetsGraph = [
     {
