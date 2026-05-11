@@ -1,5 +1,5 @@
 
-import { CategoryCard } from "../component/Category";
+import { CategoryCardPassion } from "../component/Category";
 import { LinkPassionCategory } from "../data/LinkPassionCategory";
 
 // 1. Ton interface définit la forme d'un objet "category"
@@ -14,7 +14,6 @@ interface CategoryProps {
 export const Passion = () => {
   return (
     <div className="relative  flex flex-col overflow-x-hidden gap-5 mt-30 ">
-     
 
       <div className="grid gap-10">
         <div className="sm:w-1/2">
@@ -30,7 +29,7 @@ export const Passion = () => {
         key={category.id} 
         className="flex-none w-72 snap-center" // flex-none empêche l'image de rétrécir
       >
-        <CategoryCard category={category} />
+        <CategoryCardPassion category={category} />
       </div>
     ))}
   </div>
